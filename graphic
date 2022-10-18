@@ -1,0 +1,6 @@
+import matplotlib.pyplot as plt
+import numpy as np #берем эту библиотеку а не math, тк используемая библиотека дает работать с векторами
+
+x=np.arange(0, 10, 0.01)
+plt.plot(x,3*x)
+plt.show()

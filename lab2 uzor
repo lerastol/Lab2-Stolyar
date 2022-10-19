@@ -1,0 +1,22 @@
+def esc(code):
+    return f'\u001b[{code}m'
+
+RED = esc(41)
+BLUE = esc(44)
+WHITE = esc(47)
+END = esc(0)
+
+def uzor():
+    a=WHITE + '   ' *3 + RED + '   ' *1 + WHITE + '   ' *3 + END
+    b=WHITE + '   ' *2 + RED + '   ' *1 + WHITE + '   ' *1 + RED + '   ' *1 + WHITE + '   ' *2 + END
+    c=WHITE + '   ' *1 + RED + '   ' *1 + WHITE + '   ' *3 + RED + '   ' *1 + WHITE + '   ' *1 + END
+    d=RED + '   ' *1 + WHITE + '   ' *5 + RED + '   ' *1 + END
+    print(a*2)
+    print(b * 2)
+    print(c * 2)
+    print(d*2)
+    print(c * 2)
+    print(b * 2)
+    print(a * 2)
+    print(END)
+uzor()

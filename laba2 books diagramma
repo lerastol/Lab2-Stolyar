@@ -1,0 +1,21 @@
+import csv
+
+do100=0 #колво книг дешевле 100р
+vishe100=0 #колво книг дороже 100р
+with open('D:\итмо\прога питон\Lab-1-main\books.csv', encoding='windows-1251', newline='') as csvfile:
+    vot = list(csv.reader(csvfile, delimiter=';'))
+    for row in vot[1:]:
+            if (int(row[7])) <= 100:
+                do100+=1
+            else:
+                vishe100+=1
+
+import matplotlib.pyplot as plt #
+labels='less than 100','bigger than 100' #названия двух сегментов диаграммы
+sizes=[do100,vishe100] #заданвание размеров каждого сегмента
+fig1,ax1=plt.subplots() 
+ax1.pie(sizes,labels=labels, autopct='%1.1f%%',shadow=True, startangle=90) #составление с подписанием процентного показателя от общего кргуа
+ax1.axis('equal') 
+plt.show() #показ круговой диаграммы
+
+f.close() #закрыли файл

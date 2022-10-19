@@ -1,0 +1,24 @@
+def esc(code):
+    return f'\u001b[{code}m'
+
+RED = esc(41)
+BLUE = esc(44)
+WHITE = esc(47)
+END = esc(0)
+
+def flag_jap():
+    for i in range(4):
+        print(WHITE + '   ' *23 + END)
+    for i in range(1):
+        print(WHITE + '   ' *10 +RED + '   ' *3 +WHITE + '   ' *10 + END)
+    for i in range(1):
+        print(WHITE + '   ' *9 +RED + '   ' *5 +WHITE + '   ' *9 + END)
+    for i in range(3):
+        print(WHITE + '   ' *8 +RED + '   ' *7 +WHITE + '   ' *8 + END)
+    for i in range(1):
+        print(WHITE + '   ' * 9 + RED + '   ' * 5 + WHITE + '   ' * 9 + END)
+    for i in range(1):
+        print(WHITE + '   ' *10 +RED + '   ' *3 +WHITE + '   ' *10 + END)
+    for i in range(4):
+        print(WHITE + '   ' *23+ END)
+flag_jap()

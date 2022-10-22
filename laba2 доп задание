@@ -1,0 +1,56 @@
+import os
+import time
+
+
+def esc(code):
+    return f'\u001b[{code}m'
+
+
+RED = esc(41)
+BLUE = esc(44)
+WHITE = esc(47)
+END = esc(0)
+
+
+def uzor():
+    a=WHITE + '   ' *3 + RED + '   ' *1 + WHITE + '   ' *3 + END
+    b=WHITE + '   ' *2 + RED + '   ' *1 + WHITE + '   ' *1 + RED + '   ' *1 + WHITE + '   ' *2 + END
+    c=WHITE + '   ' *1 + RED + '   ' *1 + WHITE + '   ' *3 + RED + '   ' *1 + WHITE + '   ' *1 + END
+    d=RED + '   ' *1 + WHITE + '   ' *5 + RED + '   ' *1 + END
+    print(a*2)
+    print(b * 2)
+    print(c * 2)
+    print(d*2)
+    print(c * 2)
+    print(b * 2)
+    print(a * 2)
+    print(END)
+
+
+def flag_jap():
+    for i in range(4):
+        print(WHITE + '   ' *23 + END)
+    for i in range(1):
+        print(WHITE + '   ' *10 +RED + '   ' *3 +WHITE + '   ' *10 + END)
+    for i in range(1):
+        print(WHITE + '   ' *9 +RED + '   ' *5 +WHITE + '   ' *9 + END)
+    for i in range(3):
+        print(WHITE + '   ' *8 +RED + '   ' *7 +WHITE + '   ' *8 + END)
+    for i in range(1):
+        print(WHITE + '   ' * 9 + RED + '   ' * 5 + WHITE + '   ' * 9 + END)
+    for i in range(1):
+        print(WHITE + '   ' *10 +RED + '   ' *3 +WHITE + '   ' *10 + END)
+    for i in range(4):
+        print(WHITE + '   ' *23+ END)
+
+
+#доп задание на анимацию из кадров
+if __name__ == '__main__':
+    os.system('cls')
+    while True:
+        uzor()
+        time.sleep(1)
+        os.system('cls')
+        flag_jap()
+        time.sleep(1)
+        os.system('cls')
